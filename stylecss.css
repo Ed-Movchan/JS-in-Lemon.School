@@ -1,0 +1,16 @@
+.block {
+  margin: 20px auto;
+  width: 800px;
+  height: 170px;
+  background-color: tomato;
+  border-radius: 100px;
+  position: relative;
+  text-align:center;
+}
+.block span{
+  font-size:52px;
+  color:#fff;
+  line-height: 170px;
+  
+}
+ 
