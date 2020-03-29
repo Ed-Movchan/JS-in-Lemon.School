@@ -14,3 +14,11 @@
   
 }
  
+#elem {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  border: 10px solid rgb(148, 34, 34);
+  white-space: nowrap;
+  overflow: auto;
+  }

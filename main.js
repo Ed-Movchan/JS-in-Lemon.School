@@ -1,385 +1,562 @@
-// DZ4
+//DZ6
 
 
-// 1. Клонирование массива
-// Напишите функцию copyArr(arr), которая копирует массив не изменяя оригинал.
+// Дан элемент #elem. Добавьте ему класс www.
 
-function copyArr(arr){
-	console.log(arr)
-	let newArr = arr.slice()
-	return console.log(newArr)
+let elem = document.querySelector('#elem');
+elem.classList.add('www');
+console.log(elem)
+
+// Дан элемент #elem. Удалите у него класс www.
+
+let elem = document.querySelector('#elem');
+elem.classList.remove('www');
+console.log(elem)
+
+// Дан элемент #elem. Проверьте наличие у него класса www.
+
+let elem = document.querySelector('#elem');
+let contains = elem.classList.contains('www');
+console.log(contains);
+
+// Дан элемент #elem. Добавьте ему класс www, если его нет и удалите - если есть.
+
+let elem = document.querySelector('#elem');
+let contains = elem.classList.contains('www');
+if (contains == false) {
+elem.classList.add('www');
 }
-copyArr([23,45,67,78,90])
+console.log(elem);
 
-// 2. Преобразование массива в строку
-// Напишите код, который преобразовывает и объединяет все элементы массива в одно строковое значение. 
-// Элементы массива будут разделены запятой. Получите результат двумя разными методами.
+// Дан элемент #elem. Узнайте количество его классов.
 
-let arr1 = [1,2,3];
-console.log(arr1.join());
-let numbers = [ 4, 5, 6, 7];
-let arr2 = numbers.toString();
-console.log(arr2);
+let elem = document.querySelector('#elem');
+let length = elem.classList.length;
+console.log(length);
 
-// Заполните массив 10-ю иксами с помощью цикла.
+// Дан элемент #elem. Выведите последовательно алертом его классы.
 
-let arr3 = [];
-while (arr3.length <10) {
-	arr3.push('x');
-}
-console.log(arr3)
-
-// Заполните массив числами от 1 до 10 с помощью цикла
-
-let element = 1;
-let arr4 = [];
-while (element <=10) {
-arr4.push(element++)
-}
-console.log(arr4)
-
-// Заполните массив 10-ю случайными числами (дробями) от 0 до 1 с помощью цикла. 
-// Дроби округляйте до двух знаков в дробной части.
-
-// Заполните массив 10-ю случайными числами от 1 до 10 с помощью цикла. 
-
-function shuffle(array) {
-	array.sort(() => Math.random() - 0.5);
-  }
-let arr6 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-shuffle(arr6);
-console.log(arr6);
-
-// Дан массив с числами. 
-// С помощью цикла выведите только те элементы массива, которые больше нуля и меньше 10-ти. 
-
-let arr7 = [345, 99867, 2, 84056, 9, 384538, 1231, 3];
-let newArr = arr7.filter(function(number) {
-	return number > 0 && number < 10;
-});
-console.log(newArr)
-
-// Дан массив с числами. С помощью цикла проверьте, что в нем есть элемент со значением 5. 
-// Как только будет найден первый такой элемент - выведите 'Есть' и оборвите цикл. 
-// Если такого элемента нет - ничего не выводите.
-
-let arr8 = [87, 456, 86, 234, 786, 6, 879, 6953];
-for (let i = 0; i < arr8.length; i++) {
-	const element = arr8[i];
-	if (element == 5) {
-		console.log('Есть');
-		break;
-	} else {
-	break;
-	}
+let elem = document.querySelector('#elem');
+let classNames = elem.classList;
+for (let className of classNames) {
+    alert(className);
 }
 
-// Дан массив с числами. С помощью цикла найдите сумму элементов этого массива.
+// Дан элемент #elem. Сделайте его красного цвета, размером 30px, добавьте ему границу. 
 
-let arr9 = [243, 546, 753, 3, 642, 6456, 78];
-function arr9Sum(arr9){
-	var sum = 0;
-	for(var i = 0; i < arr9.length; i++){
-		sum += arr9[i];
-		}
-	console.log(sum);
-	}
-	arr9Sum(arr9);
+let elem = document.querySelector('#elem');
+elem.style.cssText = 'color: red; font-size: 30px; padding: 10px;';
 
-// Дан массив с числами. С помощью цикла найдите сумму квадратов элементов этого массива. 
+// Дан элемент #elem. По клику на него выведите название его тега.
 
-let arr10 = [2, 4, 8, 16, 32, 64];
-let newArr = [];
-for(let i = 0; i < arr10.length; i++) {
-  let sqr = arr10[i] * arr10[i];
-  newArr.push(sqr);
-}
-let sum = 0;
-for(let j = 0; j < newArr.length; j++) {
-  sum += newArr[j];
-}
-console.log(sum);
-
-// Дан массив с числами. Найдите среднее арифметическое его элементов (сумма элементов, делить на количество)
-
-function averageСost(arr11) {
-	var sum = 0;
-	for(var i = 0; i < arr11.length; i++) {
-		sum += arr11[i];
-	}
-	return sum / arr11.length;
- }
- console.log(averageСost([4325,2342,6467,2342,54,12,8758,1,76]))
-
-// Пользователь вводит многозначное число через promt. 
-// Напишите функцию colonOdd(num), которая принимает число num в качестве аргумента 
-// и вставляет двоеточие (:) между двумя нечетными числами. 
-// Например, если вводится число 55639217, то на выход должно быть 5:563:921:7.
-
-let num = prompt('Введите многозначное число');
-function colodOdd(num) {
-	let str = num.toString();
-  let result = [str[0]];
-  for(i=1; i<str.length; i++) {
-      if((str[i-1]%2 !== 0)&&(str[i]%2 !== 0)) {
-        result.push(':', str[i]);
-       }
-      else {
-        result.push(str[i]);
-      }
-  }
-  return result.join('');  
-}
-console.log(colodOdd(num));
-
-// Напишите функцию removeDuplicates(arr), которая возвращает массив,
-// в котором удалены повторяющиеся элементы из массива arr (игнорируйте чувствительность к регистру).
-
-let arr12 = ["gold", "gold", "pink", "pink",
-  "black", "black", "silver", "silver", "blue"
-];
-function removeDuplicates(arr12) {
-  let obj = {},
-      out=[];
-  for (var i = 0; i < arr12.length; i++) {
-    var str = arr12[i];
-    obj[str] = true; 
-  }
-     for (i in obj) {
-       out.push(i);
-     }
-     return out;
-}
-result = removeDuplicates(arr12);
-console.log(result);
-
-// Напишите функцию getFirst(array, n), которая возвращает фрагмент массива, 
-// содержащий первые 'n' элементов массива.
-
-let arr13 = [2,3,4,5,6,7,8,9,10];
-function getFirst(arr13, n) {
-    if (arr13 == null) return false;
-    if (n == null) return arr13[0];
-  return arr13.slice(0, n);
+let elem = document.getElementById('#elem');
+elem.onclick = function() {
+console.log(elem.tagName);
 };
-console.log(getFirst(arr13)); 
-console.log(getFirst(arr13, 4));
-console.log(getFirst(arr13,-3));
 
-// Сумма элементов двух массивов
-// Напишите код, который создаёт массив элементов 
-// представляющих собой сумму соответствующих элементов заданных массивов.
+// Дан элемент #elem. По клику на него выведите название его тега в нижнем регистре.
 
-let arr14 = [1, 2, 3, 4, 5];
-let arr15 = [4, 5, 6];
-let arr16 = [];
-if (arr14.length > arr15.length) {
-    var count = arr14.length;
-  } else {
-    var count = arr15.length;
-  }
-      for (i = 0; i < count; i++) {
-        if (arr15[i] === undefined) {
-            arr15.push(0);
-        } else {
-            if (arr14[i] === undefined) {
-              arr14.push(0);
+let elem = document.getElementById('#elem');
+elem.onclick = function() {
+console.log(elem.tagName.toLowerCase());
+};
+
+// Даны элементы с классом www. Добавьте каждому элементу в конец название его тега в нижнем регистре.
+
+// Дан ol. Вставьте ему в конец li с текстом 'пункт'.
+
+let parent = document.getElementById('parent');
+let li = document.createElement('li');
+li.innerHTML = 'пункт';
+parent.appendChild(li);
+
+// Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, чтобы каждый элемент стоял в своем li.
+
+let parent = document.getElementById('parent');
+let array = [1, 2, 3, 4, 5];
+for ( i = 0; i < array.length; i++) {
+let li = document.createElement('li');
+li.innerHTML = array[i];
+parent.appendChild(li);
+}
+
+// Дан ul. Дан массив. Вставьте элементы этого массива в конец ul так, 
+// чтобы каждый элемент стоял в своем li. Сделайте так, 
+// чтобы к вставляемым li было привязано следующее событие: 
+// по нажатию на li она должна вывести на экран свой текст.
+
+let ul = document.getElementById('parent');
+let array = [1, 2, 3, 4, 5];
+for ( i = 0; i < array.length; i++) {
+let li = document.createElement('li');
+li.innerHTML = array[i];
+li.addEventListener('click', clickF )
+ul.appendChild(li);
+}
+function clickF(){
+alert(this.innerHTML);
+}
+
+// Дан элемент ul, а в нем li #elem. Вставьте перед элементом #elem новую li с текстом '!!!'.
+
+let parent = document.getElementById('parent');
+let elemli = document.getElementById('elem');
+let li = document.createElement('li');
+li.innerHTML = '!!!';
+parent.insertBefore(li, elemli);
+
+// Дан элемент #elem. Вставьте перед ним span с текстом '!!!'.
+
+let elem = document.getElementById('elem');
+elem.insertAdjacentHTML('beforeBegin', '<span>!!!</span>');
+
+//  Дан элемент #elem. Вставьте после него span с текстом '!!!'.
+
+let elem = document.getElementById('elem');
+elem.insertAdjacentHTML('afterEnd', '<span>!!!</span>');
+
+//  Дан элемент #elem. Вставьте ему в начало span с текстом '!!!'.
+
+let elem = document.getElementById('elem');
+elem.insertAdjacentHTML('afterBegin', '<span>!!!</span>');
+
+//  Дан элемент #elem. Вставьте ему в конец span с текстом '!!!'.
+
+let elem = document.getElementById('elem');
+elem.insertAdjacentHTML('beforeEnd', '<span>!!!</span>');
+
+// Дан элемент #elem. Найдите первого потомка этого элемента и сделайте его текст красного цвета.
+
+let elem = document.getElementById('elem');
+elem.firstElementChild.style.color = 'red';
+
+// Дан элемент #elem. Найдите последнего потомка этого элемента и сделайте его текст красного цвета.
+
+let elem = document.getElementById('elem');
+elem.lastElementChild.style.color = 'red';
+
+// Дан элемент #elem. Найдите всех потомков этого элемента и добавьте им в конец текст '!'.
+
+let elem = document.getElementById('elem');
+for(i = 0; i < elem.children.length; i++){
+elem.children[i].innerHTML += '!';
+}
+
+// Дан элемент #elem. Найдите его соседа сверху и добавьте ему в конец текст '!'.
+
+let elem = document.getElementById('elem');
+let elemsub = elem.previousElementSibling;
+elemsub.innerHTML = elemsub.innerHTML + '!';
+
+// Дан элемент #elem. Найдите его соседа снизу и добавьте ему в конец текст '!'.
+
+let elem = document.getElementById('elem');
+let elemsub = elem.nextElementSibling;
+elemsub.innerHTML = elemsub.innerHTML + '!';
+
+// Дан элемент #elem. Найдите его соседа снизу его соседа снизу (следующий элемент за соседним) 
+//  и добавьте ему в конец текст '!'.
+
+let elem = document.getElementById('elem');
+let elemsub = elem.nextElementSibling.nextElementSibling;
+elemsub.innerHTML = elemsub.innerHTML + '!';
+
+// Дан элемент #elem. Найдите его родителя и покрасьте его в красный цвет.
+
+let elem = document.getElementById('elem');
+let parent = elem.parentElement;
+parent.style.color = 'red';
+
+// Дан элемент #elem. Найдите родителя его родителя и покрасьте его в красный цвет.
+
+let elem = document.getElementById('elem');
+let parent = elem.parentElement.parentElement;
+parent.style.color = 'red';
+
+// Дан элемент #parent, внутри него дан элемент #child. Дана кнопка. 
+// По нажатию на эту кнопку удалите элемент #child.
+
+let elem = document.getElementById('click');
+elem.addEventListener('click', clickRemove);
+function clickRemove(){
+let parent = document.getElementById('parent');
+let child = document.getElementById('child');
+parent.removeChild(child);
+}
+
+// Дан ol. По нажатию на кнопку получите его последнего потомка и удалите его.
+
+let elem = document.getElementById('click');
+elem.addEventListener('click', clickRemove);
+function clickRemove(){
+let parent = document.getElementById('parent');
+parent.removeChild(parent.lastElementChild);
+}
+
+// Дан элемент. Сделайте так, чтобы по нажатию по нему этот элемент удалялся.
+
+let elem = document.getElementById('elem');
+elem.addEventListener('click', clickRemove);
+function clickRemove(){
+this.parentElement.removeChild(this);
+}
+
+// Дан ol, а внутри него li. Сделайте так, чтобы по нажатию на любую li эта li удалялась.
+
+let elem = document.getElementsByTagName('li');
+for( i = 0; i < elem.length; i++ ){
+elem[i].addEventListener('click', clickRemove);
+}
+function clickRemove(){
+this.parentElement.removeChild(this);
+}
+
+// Дан инпут. Дана кнопка. По нажатию на кнопку клонируйте этот инпут.
+
+let buttom = document.getElementById('buttonClone');
+let input = document.getElementById('input');
+buttom.addEventListener('click', funcClone);
+function funcClone(){
+let clone = input.cloneNode(true);
+input.parentElement.appendChild(clone);
+}
+
+// Дан массив. Создайте ul через createElement, 
+// затем вставьте каждый элемент этого массива в отдельную li внутри этой ul, 
+// затем вставьте эту ul в конец body.
+
+let arr = [12,23,34,45,56,67,78,89];
+let ul = document.createElement("ul");
+for ( i = 0; i < arr.length; i++) {
+let li = document.createElement('li');
+li.innerHTML = arr[i];
+ul.appendChild(li);
+}
+document.body.appendChild(ul);
+
+//  Дан инпут. Рядом с ним находится кнопочка "+". 
+//  По нажатию на эту кнопку под нашим инпутом должен появится еще один пустой инпут.
+
+let buttom = document.getElementById('buttonClone');
+let input = document.getElementById('input');
+buttom.addEventListener('click', funcClone);
+function funcClone(){
+let clone = input.cloneNode(true);
+input.parentElement.appendChild(clone);
+}
+ 
+//  Дан инпут. В него вводится число. По потери фокуса сделайте так, 
+//  чтобы каждая цифра вставилась в новый инпут. 
+//  Инпутов для цифр изначально не существует, они должны создаться в процессе работы скрипта.
+
+let inputText = document.getElementById('text');
+inputText.addEventListener('blur', function() {
+let arr = inputText.value.split('');
+for ( i=0; i<arr.length; i++) {
+let input = document.createElement('input');
+input.value = arr[i];
+input.disabled = true;
+document.body.appendChild(input);
+}
+inputText.value = null;
+})
+
+//  Дана кнопка. Сделайте так, чтобы по нажатию на эту кнопку, скрывался родитель этой кнопки.
+
+let inputSubmit = document.getElementById('submit');
+inputSubmit.addEventListener('click', function() {
+inputSubmit.parentElement.style.cssText += 'display: none';
+})
+
+// Дан элемент #elem с границами. По нажатию на кнопку выведите толщину его верхней границы. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.clientTop);
+}
+
+// Дан элемент #elem с границами. По нажатию на кнопку выведите толщину его левой границы. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.clientLeft);
+}
+
+// Дан элемент #elem с границами. По нажатию на кнопку выведите его полную ширину с учетом границы и padding. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.offsetWidth);
+}
+
+// Дан элемент #elem с границами. По нажатию на кнопку выведите его полную высоту с учетом границы и padding. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.offsetHeight);
+}
+
+// Дан элемент #elem с границами. 
+// По нажатию на кнопку выведите его полную ширину без учета границы, но с padding. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.clientWidth);
+}
+
+// Дан элемент #elem с границами. 
+// По нажатию на кнопку выведите его полную высоту без учета границы, но с padding. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(elem.clientHeight);
+}
+
+// Дан элемент #elem. Получите его ширину и высоту, без учета границы и padding. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(getComputedStyle(elem).height + getComputedStyle(elem).width);
+}
+
+// Дан элемент #elem с вертикальной полосой прокрутки. 
+// По нажатию на кнопку выведите на сколько элемент прокручен сверху. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert('scrollTop: ' + elem.scrollTop);
+}
+
+// Дан элемент #elem с горизонтальной полосой прокрутки. 
+// По нажатию на кнопку выведите на сколько элемент прокручен слева. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert('scrollLeft: ' + elem.scrollLeft);
+}
+
+// Дан элемент #elem с вертикальной полосой прокрутки. 
+// По нажатию на кнопку прокрутите его до позиции 100px сверху. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+elem.scrollTop = 100;
+}
+
+// Дан элемент #elem с вертикальной полосой прокрутки. 
+// По нажатию на кнопку прокрутите его на 100px вниз от текущего положения
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+elem.scrollTop += 100;
+}
+
+// Дан элемент #elem с вертикальной полосой прокрутки. 
+// По нажатию на кнопку выведите реальную высоту элемента с учетом прокрутки. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert('scrollHeight: ' + elem.scrollHeight);
+}
+
+// Дан элемент #elem с горизонтальной полосой прокрутки. 
+// По нажатию на кнопку выведите реальную ширину элемента с учетом прокрутки. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert('scrollWidth: ' + elem.scrollWidth);
+}
+
+// Дан элемент #elem с вертикальной полосой прокрутки. 
+// По нажатию на кнопку прокрутите его до позиции 100px от нижнего края элемента. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+let height = elem.scrollHeight;
+let height_after_scroll = height - 100;
+elem.scrollTop = height_after_scroll;
+}
+
+// Дана страница с вертикальной полосой прокрутки. 
+// По нажатию на кнопку узнайте на сколько страница прокручена по вертикали. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(pageYOffset);
+}
+
+// Дана страница с горизонтальной полосой прокрутки. 
+// По нажатию на кнопку узнайте на сколько страница прокручена по горизонтали. 
+
+let elem = document.getElementById('elem');
+let click = document.getElementById('infoButton');
+click.addEventListener('click', infoClick);
+function infoClick(){
+alert(pageXOffset);
+}
+
+// Дана страница с горизонтальной и вертикальной полосами прокрутки. 
+// По нажатию на кнопку прокрутите ее в точку 300px слева, 500px сверху. 
+
+let click = document.getElementById('infoButton');
+click.addEventListener('click', moveClick);
+function moveClick(){
+window.scrollTo(300, 500);
+}
+
+// Дана страница с вертикальной полосой прокрутки. 
+// По нажатию на кнопку прокрутите на 300px вниз от текущего положения. 
+
+let click = document.getElementById('infoButton');
+click.addEventListener('click', moveClick);
+function moveClick(){
+window.scrollBy(0, 300);
+}
+
+// По нажатию на кнопку прокрутите страницу до самого низа. 
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+let elem = document.getElementById('elem');
+elem.scrollTop = elem.scrollHeight;
+})
+
+// По нажатию на кнопку прокрутите страницу на 400px от текущего положения. 
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+let elem = document.getElementById('elem');
+elem.scrollTop += 400;
+})
+
+// По нажатию на кнопку проверьте, прокручена ли страница до самого низа. 
+// Если это так - прокрутите ее в положение 100px от верхнего края. 
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+let elem = document.getElementById('elem');
+if (elem.scrollTop == elem.scrollHeight - elem.clientHeight) elem.scrollTop = 100;
+})
+
+// Дан элемент #elem. По клику на него увеличьте его ширину и высоту в 2 раза. 
+
+let elem = document.getElementById('elem');
+elem.addEventListener('click', function() {
+let style = getComputedStyle(elem);
+elem.style.width = parseInt(style.width) * 2 + 'px';
+elem.style.height = parseInt(style.height) * 2 + 'px';
+})
+
+// Дана кнопка. По нажатию на у кнопку узнайте, есть ли у окна браузера вертикальная прокрутка.
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+alert(document.documentElement.clientHeight)
+})
+
+//  Дана кнопка. По нажатию на эту кнопку прокрутите окно браузера до самого низа. 
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+document.documentElement.scrollTo(0, document.documentElement.offsetHeight);
+})
+
+//  Дана кнопка. По нажатию на эту кнопку узнайте, есть ли у окна браузера вертикальная прокрутка. 
+
+let button = document.getElementById('button');
+button.addEventListener('click', function() {
+alert('Прокрутка на ' + window.pageYOffset + 'px')
+})
+
+// Реализуйте функцию prettify, которая находит текст 
+// (дочерние текстовые ноды) внутри элемента div и оборачивает текст в параграф.
+
+(function () {
+    window.prettify = function (d) {
+        var treeWalker = document.createTreeWalker(d,4),
+            elementsArray = [],
+            valuesArray = [];
+        while (treeWalker.nextNode()) {
+            var parentEl = treeWalker.currentNode.parentNode,
+                valueElement = treeWalker.currentNode.nodeValue.trim();
+            if (parentEl.tagName === 'DIV' && valueElement !== "") {
+                elementsArray.push(parentEl);
+                valuesArray.push(valueElement);
             }
         }
-        arr16.push(arr14[i] + arr15[i]);
-      }
-console.log(arr16)
-
-// Объединить два массива без дублирования элементов
-// Напишите функцию union, которая возвращает массив 
-// состоящий только из уникальных элементов из каждого массива.
-
-let arr17 = [9, 14, 26, 67, 89];
-let arr18 = [9, 14, 1, 67, 104, 12];
-let union = function(arr17, arr18) {
-    let arr19 = [];
-    let arr = arr17.concat(arr18);
-    let len = arr.length;
-    let obj = {};
-    while(len--) {
-        let itm = arr[len];
-        if(!obj[itm]) {
-            arr19.unshift(itm);
-            obj[itm] = true;
+        for (var i = 0; i < elementsArray.length; i++) {
+            elementsArray[i].innerHTML = '<p>' + valuesArray[i] + '</p>';
         }
+    };
+})();
+window.onload = function () {
+        const elements = prettify(document);
+        console.log(document.body.innerHTML);
     }
-    return arr19;
-};
-console.log(union(arr17, arr18));
 
-// Напишите функцию union, которая возвращает массив, 
-// содержащий все элементы arr1, которые не находятся в arr2 и наоборот.
+// Реализуйте функцию normalize, которая нормализует имена классов для всех элементов на странице. 
+// В данном случае это означает что происходит преобразование всех классов 
+// написанных используя kebab нотацию в camelCase нотацию: text-center => textCenter
 
-let arr20 = [40, 99, 88];
-let arr21 = [40, 99, 345, 890, 1212];  
-function arrayDiff(arr20, arr21) {
-  let obj1={}, obj2={}, diff=[], key;
-  for (let i=0; i < arr20.length; i++) { obj1[arr20[i]] = true; }
-  for (let i=0; i < arr21.length; i++) { obj2[arr21[i]] = true; }
-  for (key in obj1) { if (!(key in obj2)) { diff.push(key); } }
-  for (key in obj2) { if (!(key in obj1)) { diff.push(key); } }
-  return diff;
-}
-console.log(arrayDiff(arr20, arr21)); 
-console.log(arrayDiff(arr21, arr20));
-
-// Напишите функцию compareNumbers(arr), которая возвращает массив, 
-// элементы которого отсортированы по убыванию их значений.
-
-function compareNumbers(arr22){
-	var arr22 = arr22.sort(function(a,b){return a-b})
-	console.log(arr22)
-  }
-  let numbers = [88, 23, 45, 678, 55, -99, -4, 62, 11];
-  compareNumbers(numbers);
-
-// Напишите функцию sumOfSquares(arr), которая возвращает сумму квадратов значений массива.
-
-function sumOfSquares(arr23) {
-	return arr23.reduce(function (prev, cur) {
-	  return prev + cur * cur;
-	  })
-  }
-  console.log(sumOfSquares([1, 2, 3, 4, 5]));
-
-// Напишите код, который определяет сумму и произведение значений массива.
-
-let arr24 = [1,2,3,4,5,6,7,8,9];
-let sum = arr24.reduce(function(prev, curr) { return prev + curr });
-let product = arr24.reduce(function(prev, curr) { return prev * curr });
-console.log("Сумма : "+sum);
-console.log("Произведение : "+product);
-
-// Напишите функцию filterFalse(arr), которая очищает массив от ложных (false) 
-// значений: false, null, undefined, 0, –0, NaN и "" (пустя строка).
-
-let arr25 = [NaN, 0, 77, false, -17, '',undefined, 99, null];
-function filterFalse(arr25) {
-  return arr25.filter(function(v) { return !!v; });
-}
-console.log(filterFalse(arr25));
-
-// Переместить элемент массива из одной позиции в другую
-// Напишите функцию moveElement(arr,from,to), 
-// которая позволяет переместить элемент массива из позиции from в позицию to.
-
-function moveElement(arr26,from,to) {
-	arr26.splice(to,0,arr26.splice(from,1)[0]);
-	return arr26;
-  };
-  let arr26 = [ 1, 2, 3, 4, 5];
-  console.log(moveElement(arr26,3,1));
-
-// Напишите функцию generateNumbers(start, len), которая генерирует массив заданной длины len, 
-// заполненный целыми числами, где каждое число больше предыдущего на единицу.
-
-function generateNumbers(start, len) {
-    let arr27 = Array(len);
-    for ( i = 0; i < len; i++, start++) {
-      arr27[i] = start;
+(function () {
+    window.normalize = function (d) {
+        let all = d.body.getElementsByTagName('*'),
+            pattern = /.*-.*/;
+        for (i = 0; i < all.length; i++) {
+            let res = '';
+            for (j = 0; j < all[i].classList.length; j++) {
+                let str = all[i].classList[j],
+                    pos = str.indexOf('-');
+                if (pattern.test(str)) {
+                    let chunkStr = str.split(''),
+                        resultStr = '',
+                        newChar = chunkStr[pos + 1].toUpperCase();
+                    chunkStr.splice(pos, 1);
+                    chunkStr[pos] = newChar;
+                    resultStr = chunkStr.join('');
+                } else {
+                    resultStr = str;
+                }
+                res += resultStr + ' ';
+            }
+            if (res !== '') {
+                all[i].removeAttribute('class');
+                all[i].setAttribute('class', res.trim());
+            }
+        }
+    };
+    window.onload = function () {
+        const elements = normalize(document);
+        console.log(document.body.innerHTML);
     }
-        return arr27;
-}
-console.log(generateNumbers(8, 16));
-
-// Имеется массив простых чисел: numbers = [2, 3, 5, 7, 11, 13, 17, 19]. 
-// Использую метод reduce() напишите функцию currentSums(numbers), 
-// которая возвращает новый массив из такого же числа элементов, 
-// в котором на каждой позиции будет находиться сумма элементов массива numbers до этой позиции включительно.
-
-let numbers = [2, 3, 5, 7, 11, 13, 17];
-function currentSums(numbers) {
-   let result = [];
-   numbers.reduce(function(sum, current, i) {
-      return result[i] = sum + current;
-   }, 0);
-   console.log(result);
-}
-currentSums(numbers);
-
-// Дан массив ['a', 'b', 'c']. Добавьте ему в конец элементы 1, 2, 3.
-
-let arr28 = ['a', 'b', 'c'];
-let element = 1;
-while (element<=3) {
-	arr28.push(element++);
-}
-console.log(arr28);
-
-// Дан массив [1, 2, 3]. Сделайте из него массив [3, 2, 1].
-
-let arr29 = [1,2,3];
-arr29.reverse();
-console.log(arr29);
-
-// Дан массив [1, 2, 3]. Добавьте ему в начало элементы 4, 5, 6.
-
-let arr30 = [1,2,3];
-newLength = arr30.unshift(4,5,6);
-console.log(arr30);
-
-// Дан массив ['js', 'css', 'jq']. Выведите на экран последний элемент.
-
-let arr31 = ['js', 'css', 'jq'];
-console.log(arr31[2]);
-
-// Дан массив [1, 2, 3, 4, 5]. С помощью метода slice запишите в новый элементы [4, 5].
-
-let arr32 = [1,2,3,4,5];
-arr33 = arr32.slice([3], [5]);
-console.log(arr33);
-
-// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice преобразуйте массив в [1, 4, 5].
-
-let arr34 = [1,2,3,4,5];
-arr34.splice(1,2);
-console.log(arr34);
-
-// Дан массив [1, 2, 3, 4, 5]. С помощью метода splice запишите в новый массив элементы [2, 3, 4].
-
-let arr35 = [1,2,3,4,5];
-arr36 = arr35.splice(1,3);
-console.log(arr36);
-
-// Дан массив [ [1, 2, 3], [4, 5, 6], [7,8,9] ]. Выведите на экран цифру 4 из этого массива.
-
-let arr37 = [ [1, 2, 3], [4, 5, 6], [7,8,9] ];
-arr38 = arr37[1];
-console.log(arr38[0]);
-
-// Дан объект {js:['jQuery', 'Angular'], php: 'hello', css: 'world'}. Выведите с его помощью слово 'jQuery'.
-
-let obj = {js:['jQuery', 'Angular'], php: 'hello', css: 'world'};
-console.log(obj.js[0]);
-
-// Создайте массив arr = ['a', 'b', 'c']. Выведите его на экран с помощью функции alert.
-
-let arr38 = ['a', 'b', 'c'];
-alert(arr38);
-
-//  С помощью массива arr из предыдущего номера выведите на экран содержимое первого, второго и третьего элементов.
-
-let arr39 = ['a', 'b', 'c'];
-alert(arr39[0]);              
-alert(arr39[1]);
-alert(arr39[2]);
-
-//  Создайте массив arr = ['a', 'b', 'c', 'd'] и с его помощью выведите на экран строку 'a+b, c+d'.
-
-let arr40 = ['a', 'b', 'c', 'd'];
-console.log(arr40[0] + '+' + arr40[1] + ',' + arr40[2] + '+' + arr40[3]);
-
-//  Создайте массив arr с элементами 2, 5, 3, 9. 
-//  Умножьте первый элемент массива на второй, а третий элемент на четвертый. 
-//  Результаты сложите, присвойте переменной result. Выведите на экран значение этой переменной.
-
-let arr41 = [2, 5, 3, 9];
-calc1 = arr41[0] * arr41[1];
-calc2 = arr41[2] * arr41[3];
-result = calc1 + calc2;
-console.log(result);
+})();
