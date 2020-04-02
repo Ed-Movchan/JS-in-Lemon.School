@@ -4,215 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .selected {
+          background: rgb(106, 42, 207);
+        }
+        li {
+          cursor: pointer;
+        }
+      </style>
 </head>
 
-<!-- <body>
-<p>Boom</p>
-text
- <div>Bam</div>
- </body>
-    const elements = prettify(document);
-    console.log(document.body.innerHTML);
- <body>
- <p>Boom</p>
-  text
- <div><p>Bam</p></div>
- </body> -->
-    
- <body>
- <div class="text-center row-b">Bam</div>
- </body>
-    const elements = normalize(document);
-    console.log(document.body.innerHTML);
-<body>
- <div class="textCenter rowB">Bam</div>
- </body>
-    
-
-
 <body>
 
-<h1>JS in Lemon.School</h1>
 
-<form action="index.php"> -->
+<h1 id="hide">JS in Lemon.School</h1>
 
-    <input type="button" id="hider" value="Нажмите, чтобы произошло действие" />
+<input type="submit", id = "click", value="Нажми, и H1 исчезнет"></input>
 
-    <div id="text">Text</div>
-
-    <ol id="parent"> Parent </ol>
-    <ul id="parent"> Parent </ul>
-
-    <ul id="parent">
-        <li>Element</li>
-        <li id="elem"></li>
-        <li>Element</li>
-        </ul>
-
-        <p id="p"> Text for TEST</p>
+<input type="button" onclick="this.hidden=true" value="Нажми, и я спрячусь"></input>
 
 <ul>
-    <li>First</li>
-    <li>Second</li>
-    <li>Third</li>
-</ul>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    <li>Arnold</li>
+    <li>Bengamin</li>
+    <li>Carlos</li>
+    <li>Daniel</li>
+    <li>Eric</li>
+    </ul>  
 
-<div id="#elem" class="www">Element1, Element2, Element3</div>
+    <div id=mydiv style="position: absolute">Element</div>
 
-<div id="elem">
-    <p>First Element</p>
-    <p>Second Element</p>
-    <p>Third Element</p>
-    </div>
-
-<div>
-    <p>First Element</p>
-    <p id="elem">Second Element</p>
-    <p>Third Element</p>
-    </div>
-
-    <div>
-        <p id="elem">First Element</p>
-        <p>Second Element</p>
-        <p>Third Element</p>
-        </div>
-
-    <div id="parent"> parent
-        <p id="elem">First Element</p>
-        <p>Second Element</p>
-        <p>Third Element</p>
-        </div>
-
-        <div id="parent"> parent
-            <p id="child">First Element</p>
-            <p>Second Element</p>
-            <p>Third Element</p>
-            </div>
-            <input type="submit" id="click">
-
-        <ol id="parent">
-                <li>First Element</li>
-                <li>Second Element</li>
-                <li>Third Element</li>
-                </ol>
-                <input type="submit" id="click">
-
-        <ol id="elem">Список
-            <li>First Element</li>
-            <li>Second Element</li>
-            <li>Third Element</li>
-            </ol>
-
-                    <input type="submit" value="clone" id="buttonClone">
-<input type="text" id="input">
-
-<input type="submit" value="clone" id="buttonClone">
-<input type="text" id="input">
-
-<input type="number" value="number" id="text">
-
-<input type="button" value="Нажать, для удаления" id="submit" />
-
-<div id="elem">
-    Hi! I am text! I try to help you learn JS + HTML + CSS. Try to scroll me. Try to scroll me.
-    Try to scroll me. Try to scroll me. Try to scroll me. Try to scroll me. Try to scroll me.
-    Try to scroll me. Try to scroll me. Try to scroll me. Try to scroll me. Try to scroll me.
-    Yes, you do it well! And now you get information about your scrolling! Thank you!</div>
-    <input type="submit" id="infoButton" value="нажми на меня">
-    
-    <input type="submit" id="button" value="нажми на меня">
-    <div id="elem"> Text text Text text
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-        wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww
-        eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
-        rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr
-        ttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttttt
-        yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
-        uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu
-        iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
-        ooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooo
-        ppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppppp
-        </div>
-
-<div class="block">
-    <span>Кнопка</span>
-   <div class="ico"></div>
-   </div>
-   <LINK rel=stylesheet type="text/css" href="stylecss.css">
 </body>
-<script src="main.js"></script>
+
 <script
 src="https://code.jquery.com/jquery-3.4.1.min.js"
 integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
 crossorigin="anonymous"></script>
+<script>src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous"
+</script>
+<script src="main.js"></script>
 </html>
